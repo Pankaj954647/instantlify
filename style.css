@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+
+    /* Colorful background */
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2,
+        #f093fb
+    );
+
+    min-height: 100vh;
+}
+
+
+/* Main Container */
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 35px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+
+    border: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+
+/* Heading */
+
+h1 {
+    text-align: center;
+
+    background: linear-gradient(
+        90deg,
+        #ff512f,
+        #dd2476,
+        #7f00ff
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.container > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+/* Labels */
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+/* ⭐ Star Rating */
+
+.stars {
+    display: flex;
+
+    flex-direction: row-reverse;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin: 15px 0 30px;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    font-size: 45px;
+
+    color: #d5d5d5;
+
+    cursor: pointer;
+
+    margin: 0;
+
+    transition: 0.3s;
+}
+
+.stars label:hover,
+.stars label:hover ~ label,
+.stars input:checked ~ label {
+    color: #ffc107;
+
+    transform: scale(1.15);
+}
+
+
+/* 🎚️ Rating Box */
+
+.rating-box {
+    margin-bottom: 25px;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    background: linear-gradient(
+        135deg,
+        #fdfbfb,
+        #ebedee
+    );
+
+    border-left: 6px solid #764ba2;
+}
+
+
+/* Range Slider */
+
+.rating-box input[type="range"] {
+    width: 85%;
+
+    cursor: pointer;
+
+    accent-color: #764ba2;
+}
+
+.rating-box span {
+    display: inline-block;
+
+    min-width: 35px;
+
+    text-align: center;
+
+    padding: 5px 8px;
+
+    border-radius: 8px;
+
+    background: #764ba2;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+/* 📝 Textarea */
+
+textarea {
+    width: 100%;
+
+    height: 140px;
+
+    padding: 15px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 12px;
+
+    resize: vertical;
+
+    font-size: 15px;
+
+    font-family: Arial, sans-serif;
+
+    transition: 0.3s;
+}
+
+textarea:focus {
+    outline: none;
+
+    border-color: #764ba2;
+
+    box-shadow:
+        0 0 10px rgba(118, 75, 162, 0.3);
+}
+
+
+/* 🚀 Submit Button */
+
+button {
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 25px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        90deg,
+        #ff512f,
+        #dd2476,
+        #7f00ff
+    );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(118, 75, 162, 0.4);
+}
+
+
+/* ✅ Success Message */
+
+#message {
+    color: #0a9b55;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    margin-top: 18px;
+}
+
+
+/* 📱 Mobile */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .stars label {
+        font-size: 38px;
+    }
+}

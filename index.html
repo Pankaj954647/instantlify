@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Review Form</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Customer Review Form</h1>
+        <p>We would love to hear your feedback!</p>
+
+        <form id="reviewForm">
+
+            <!-- Star Rating -->
+            <label>Overall Rating</label>
+
+            <div class="stars">
+
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5">★</label>
+
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4">★</label>
+
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3">★</label>
+
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2">★</label>
+
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1">★</label>
+
+            </div>
+
+
+            <!-- Product Quality -->
+            <div class="rating-box">
+
+                <label for="quality">Product Quality</label>
+
+                <input
+                    type="range"
+                    id="quality"
+                    min="0"
+                    max="10"
+                    value="5"
+                >
+
+                <span id="qualityValue">5</span>/10
+
+            </div>
+
+
+            <!-- Customer Service -->
+            <div class="rating-box">
+
+                <label for="service">Customer Service</label>
+
+                <input
+                    type="range"
+                    id="service"
+                    min="0"
+                    max="10"
+                    value="5"
+                >
+
+                <span id="serviceValue">5</span>/10
+
+            </div>
+
+
+            <!-- Overall Experience -->
+            <div class="rating-box">
+
+                <label for="experience">Overall Experience</label>
+
+                <input
+                    type="range"
+                    id="experience"
+                    min="0"
+                    max="10"
+                    value="5"
+                >
+
+                <span id="experienceValue">5</span>/10
+
+            </div>
+
+
+            <!-- Feedback -->
+            <label for="feedback">Your Feedback</label>
+
+            <textarea
+                id="feedback"
+                placeholder="Write your feedback here..."
+                required
+            ></textarea>
+
+
+            <button type="submit">Submit Review</button>
+
+            <p id="message"></p>
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
